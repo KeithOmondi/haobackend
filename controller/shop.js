@@ -52,7 +52,7 @@ router.post("/create-agent", isAuthenticated, isAdmin("Admin"), catchAsyncErrors
     const resetToken = agent.getResetPasswordToken();
     await agent.save({ validateBeforeSave: false });
 
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`; // Update to your frontend reset password page
+    const resetUrl = `https://haochapchap.vercel.app/reset-password/${resetToken}`; // Update to your frontend reset password page
 
     const message = `
       Hello ${agent.name},
