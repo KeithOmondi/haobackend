@@ -31,7 +31,7 @@ router.post("/create-user", async (req, res, next) => {
     // Create an activation token (make sure the function is defined elsewhere)
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:5173/activation/${activationToken}`; // Fixed URL
+    const activationUrl = `https://haochapchap.vercel.app/activation/${activationToken}`; // Fixed URL
 
     try {
       await sendMail({
